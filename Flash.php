@@ -22,6 +22,14 @@ class Flash
         echo $_SESSION["Flash-$this->type"] . "<br>";
     }
 
+    public function getType() {
+        return $this->type;
+    }
+
+    public function getMessage() {
+        return $this->message;
+    }
+
     private function setFlashInSession($type, $message)
     {
         if (!array_key_exists("Flash-$type", $_SESSION)) {
